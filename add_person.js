@@ -17,14 +17,15 @@ const last = args[1]
 const date = args[2]
 
 //Insert Happens Here.
-knex('famous_people').insert({
+knex('famous_people').returning('*')
+.insert({
   first_name : first,
   last_name : last,
   birthdate: date
 }).asCallback(function(err, rows) {
 
   if(err) {
-    console.log("Cannot add to DB")
+    console.log("Cannot add to DB");
     return;
   }
   console.log(rows);

@@ -27,7 +27,8 @@ function printOutput(rowcount, output){
 }
 
 
-knex.select('*').from('famous_people').where('first_name', name).orWhere('last_name',name).asCallback(function (err, rows){
+knex.select('*').from('famous_people').where('first_name', name).orWhere('last_name',name)
+.asCallback(function (err, rows){
   if (err) {
     console.log('Cannot get data');
     return;
