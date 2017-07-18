@@ -16,7 +16,7 @@ console.log('name');
 
 function getString(obj) {
 
-  let string = `- ${obj.id}: ${obj.first_name} ${obj.last_name}, born ${obj.birthdate}`
+  let string = `- ${obj.id}: ${obj.first_name} ${obj.last_name}, born ${obj.birthdate.toISOString().substring(0,10)}`
   return string;
 }
 

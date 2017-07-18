@@ -16,6 +16,7 @@ const first = args[0]
 const last = args[1]
 const date = args[2]
 
+//Insert Happens Here.
 knex('famous_people').insert({
   first_name : first,
   last_name : last,
